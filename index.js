@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 // Configure CORS
 app.use(
   cors({
-    origin: "http://localhost:3000", // Your frontend URL
+    origin: ["http://localhost:3000","https://online-food-ordering-lyart.vercel.app/"], // Your frontend URL
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true,
