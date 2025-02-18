@@ -47,14 +47,14 @@ export const signupUser = async (req, res) => {
         res.cookie("accessToken", accessToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
             maxAge: 3600000,
         });
 
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000, 
         });
 
@@ -103,7 +103,7 @@ export const loginUser = async (req, res) => {
         res.cookie("accessToken", accessToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
             maxAge: 3600000,
             
         });
@@ -111,7 +111,7 @@ export const loginUser = async (req, res) => {
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000,
            
         });
@@ -161,14 +161,14 @@ export const refreshToken = async (req, res) => {
         res.cookie("accessToken", newAccessToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
             
         });
 
         res.cookie("refreshToken", newRefreshToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict",
+            sameSite: "none",
            
         });
 
@@ -187,12 +187,12 @@ export const logoutUser = async (req, res) => {
         res.clearCookie("accessToken", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict"
+            sameSite: "none"
           });
           res.clearCookie("refreshToken", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "Strict"
+            sameSite: "none"
           });
           
         res.status(200).json({ message: "Logout successful" });
