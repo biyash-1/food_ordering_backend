@@ -15,7 +15,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", 
-      "https://online-food-ordering-lyart.vercel.app"
+      "https://online-food-ordering-lyart.vercel.app",
+      "http://localhost:5173"
     ], // Allowed frontend URLs
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
