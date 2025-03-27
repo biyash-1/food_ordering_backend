@@ -17,7 +17,7 @@ app.use(
       "http://localhost:3000", 
       "https://online-food-ordering-lyart.vercel.app",
       "http://localhost:5173",
-      "https://resturant-frontend-seven.vercel.app/"
+      "https://resturant-frontend-seven.vercel.app"
     ], // Allowed frontend URLs
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
